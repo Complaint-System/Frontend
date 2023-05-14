@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+@layer components {
+  .pointer * {
+    @apply cursor-pointer;
+  }
+
+  .gridElem {
+    @apply w-full h-full  p-6;
+  }
+  .flex-center {
+    @apply flex flex-row justify-center items-center;
+  }
+}
+
+html {
+  font-family: "Mulish", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+#root {
+  background-color: #363636;
+}
+.bg-hero {
+  z-index: 0;
+  background: rgb(29, 191, 130);
+  background: linear-gradient(
+    180deg,
+    rgba(29, 191, 130, 1) 0%,
+    rgba(245, 245, 245, 0) 100%
+  );
+}
+
+.unset {
+  background-color: unset;
+}
+
+.tickets-table th,
+.tickets-table td,
+.tickets-table {
+  height: 80px;
+  border-bottom: 1px solid #686868;
+  z-index: 0;
+}
+.tickets-table td,
+.tickets-table th {
+  padding: 10px;
+  z-index: 0;
+}
+
+.tickets-table thead tr {
+  cursor: default;
+}
+.tickets-table:hover thead tr {
+  background-color: unset;
+}
+
+.tickets-table tr {
+  text-align: left;
+  transition: all 0.2s;
+  z-index: 0;
+}
+.tickets-table tr:hover {
+  background-color: #e0dede6b;
+}
+.tickets-table td[colspan="3"]:hover {
+  background-color: white;
+}
+
+.blurr {
+  will-change: filter;
+  backdrop-filter: blur(4px);
+}
+textarea {
+  resize: none;
+}
+
+input#file-upload-button {
+  color: aqua;
+  text-decoration: dotted;
+  background-color: aqua;
+}
+
+.tickets-table td > *,
+.tickets-table td div * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tickets-table .overflow-show div {
+  overflow: visible;
+}
+
+#overflow-hidden {
+  overflow: hidden;
+}
+
+.shake-horizontal {
+  -webkit-animation: shake-horizontal 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+.loginBg {
+  background: #2ec687; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #0f3443,
+    #2ec687
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #0f3443,
+    #2ec687
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
